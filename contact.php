@@ -1,6 +1,12 @@
 <?php
 require_once __DIR__ .'/utilities/Page.php';
 
-$indexPage = new Page();
+$contactPage = new Page();
 
-$indexPage->renderPage('contact.html.twig');
+if(isset($_POST)){
+    $contactPage->renderPage('contact.html.twig');
+}else{
+    $donneContact =$_POST;
+    $_SESSION['donnes'][] = $donneContact;
+    $contactPage->redirectPage('index.php');
+}

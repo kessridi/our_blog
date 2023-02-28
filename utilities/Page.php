@@ -11,7 +11,7 @@ $this->twig = new \Twig\Environment($loader);
 
 session_start();
 
-if(isset($_SESSION['products']) && !empty($_SESSION['products'])) {
+if(isset($_SESSION['donnes']) && !empty($_SESSION['donnes'])) {
     echo 'Set and not empty, and no undefined index error!';
  }
 
@@ -23,7 +23,7 @@ public function renderPage(string $pageTitle, array $params=[]){
 }
 
 public function redirectPage(string $page){
-    header('location'.$page);
+    header('location: '.$page);
 
 }
 
