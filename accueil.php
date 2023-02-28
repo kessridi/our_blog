@@ -2,5 +2,5 @@
 require_once __DIR__ .'/utilities/Page.php';
 
 $indexPage = new Page();
-
-$indexPage->renderPage('accueil.html.twig');
+$msg ="hello";
+$indexPage->renderPage('accueil.html.twig',['msgAccueil'=>$msg]);
