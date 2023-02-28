@@ -1,5 +1,6 @@
 {
     "require": {
-        "twig/twig": "^3.5"
+        "twig/twig": "^3.5",
+        "symfony/webpack-encore-bundle": "^1.16"
     }
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<!-- #region Temporary stylsheet-->
+    
+   
+    <style>
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #474545;
+    color: #d9e716;
+  }
+
+  .active {
+    background-color: #d9e716;
+    color: #474545;
+  }
+
+  footer {
+   
+    background-color: #d9e716;
+
+  
+  }
+    </style>
+    
+<!-- #endregion Temporary stylsheet-->
+      
+    
+    {% block stylesheet %}
+    <!-- base css link-->
+    <link rel="stylesheet" href="css/base.css">
+    
+    <!-- water css link-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    {% endblock %}
+
+    {% block js %}
+    <script src="./js/base.js" defer></script>
+{% endblock %}  
+    
+    
+    <title>
+      {% block title %}
+      page's title
+      {% endblock %}
+    </title>
+
+  </head>
+  <body>
+    <header>
+
+      {% block header%} 
+   
+      <ul>
+        <li><a class="active" href="accueil.php">Accueil</a></li>
+        <li><a href="articles.php">Articles</a></li>
+        <li><a href="contact.php">Contact</a></li>
+      </ul>
+      {% endblock %}
+    
+    </header>
+    <main>
+     
+      {% block content %} 
+      content goes here..
+      {% endblock %}
+    
+    </main>
+   
+    <footer>
+     
+      {% block footer %} 
+        &copy; Copyright 2023 by <a href="https://www.philiance.com/" target="_blank" > Aristide, Sherley, Zahra, Kamel team</a>.
+      {% endblock %}
+
+    </footer>
+ 
+  </body>
+</html>
